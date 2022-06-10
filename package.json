@@ -1,0 +1,25 @@
+{
+  "name": "empty.jest.project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config jest.config.js",
+    "sanity": "jest --config jest.config.js --testNamePattern=sanity"
+  },
+  "author": "anastasia",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@faker-js/faker": "^7.1.0",
+    "babel-jest": "^28.0.1",
+    "supertest": "^6.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.0.0",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3"
+  }
+}
