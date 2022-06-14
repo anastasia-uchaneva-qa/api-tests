@@ -4,7 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config jest.config.js",
+    "cirrusplatform": "cross-env NODE_ENV=prod jest --config jest.config.js",
+    "cirrus0": "cross-env NODE_ENV=cirrus0 jest --config jest.config.js",
+    "cirrus1": "cross-env NODE_ENV=cirrus1 jest --config jest.config.js",
+    "cirrus2": "cross-env NODE_ENV=cirrus2 jest --config jest.config.js",
+    "cirrus3": "cross-env NODE_ENV=cirrus3 jest --config jest.config.js",
+    "cirrus4": "cross-env NODE_ENV=cirrus4 jest --config jest.config.js",
+    "cirrus5": "cross-env NODE_ENV=cirrus5 jest --config jest.config.js",
+    "cirrusrc": "cross-env NODE_ENV=cirrusrc jest --config jest.config.js",
+    "cirrusnext": "cross-env NODE_ENV=cirrusnext jest --config jest.config.js",
+    "cirrusat": "cross-env NODE_ENV=cirrusat jest --config jest.config.js",
     "sanity": "jest --config jest.config.js --testNamePattern=sanity"
   },
   "author": "anastasia",
@@ -14,6 +23,8 @@
     "@babel/preset-env": "^7.16.11",
     "@faker-js/faker": "^7.1.0",
     "babel-jest": "^28.0.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
     "supertest": "^6.2.2"
   },
   "devDependencies": {

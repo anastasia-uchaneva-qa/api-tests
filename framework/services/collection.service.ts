@@ -1,11 +1,11 @@
 import * as supertest from 'supertest';
-import urls from '../config';
+import token from '../config';
 
 const Collection = {
     post: async (body) => {
-        const r = await supertest(urls.prod)
+        const r = await supertest(`https://api.${process.env.DOMEN_NAME}/api`)
             .post('/v1/integrations/collections')
-            .set({'Authorization': 'EAPI 4JgPkKKN2DGY7qVJf7GDo1Xq8oRdLSChwxH4DzN6eSsGc4QR', 'Accept':'application/json'})
+            .set({'Authorization': `EAPI ${token}`, 'Accept':'application/json'})
             .send(body);
         return r;
     },

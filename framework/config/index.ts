@@ -1,3 +1,3 @@
-import urls from './urls';
+import token from './token';
 
-export default urls;
+export default token;
