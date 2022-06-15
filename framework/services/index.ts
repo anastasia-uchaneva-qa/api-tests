@@ -1,9 +1,9 @@
-//import Schedule from './schedule.service';
+import Login from './login.service';
 import Collection from './collection.service';
 
 //create new object
 const api = () => ({
-  //Schedule: () => ({ ...Schedule }),
-  Collection: () => ({ ...Collection })
+  Collection: () => ({ ...Collection }),
+  Login: () => ({ ...Login })
 });
 export default api;

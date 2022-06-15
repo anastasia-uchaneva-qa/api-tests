@@ -1,7 +1,7 @@
 import api from '../framework/services/';
 import BuildCollection from '../framework/fixtures/builder/collection';
 
-test('creating of collection is successful when all values are set', async () => {
+test.skip('creating of collection is successful when all values are set', async () => {
     const body = new BuildCollection().addExternalId().addTitle().addOwner().addTaxonomies().addObjectiveRepositories()
         .generate();
     const r = await api().Collection().post(body);
@@ -16,7 +16,7 @@ test('collection with not existing owner is not created', async () => {
     expect(r.text).toContain('{"Code":806,"Error":"Collection Owner has not been found"}');
 });
 
-test('collection with owner without permission "Add collection" is not created', async () => {
+test.skip('collection with owner without permission "Add collection" is not created', async () => {
     const body = new BuildCollection().addExternalId().addTitle().addOwnerWithoutPermission().addTaxonomies().addObjectiveRepositories()
         .generate();
     const r = await api().Collection().post(body);
